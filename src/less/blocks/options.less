@@ -1,0 +1,25 @@
+.options {
+  background-color: @green;
+   &__inner {
+     margin: 0 auto;
+     border-top: 1px solid @green;
+
+     @media (min-width: @screen-sm) {
+       width: @container-sm;
+     }
+
+     @media (min-width: @screen-lg) {
+       width: @container-lg;
+     }
+   }
+
+  &__title {
+    color: #FFFFFF;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+
+
+}

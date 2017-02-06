@@ -1,0 +1,128 @@
+.promo {
+  background-image: url("../../img/big-banner.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  border-top: 1px solid #ffffff;
+  height: 323px;
+
+  @media (min-width: @screen-sm) {
+
+
+  }
+
+  @media (min-width: @screen-lg) {
+    height: 433px;
+
+  }
+
+  &__slider {
+
+    margin: 0 auto;
+
+    @media (min-width: @screen-sm) {
+      width: @container-sm;
+
+    }
+
+    @media (min-width: @screen-lg) {
+      width: @container-lg;
+
+    }
+  }
+
+  &__item {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+    text-align: center;
+
+    @media (min-width: @screen-sm) {
+      background-color: rgba(255, 255, 255, 0);
+      text-align: left;
+
+    }
+
+    @media (min-width: @screen-lg) {
+      background-color: rgba(255, 255, 255, 0);
+      text-align: left;
+
+    }
+
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    display: inline;
+
+    @media (min-width: @screen-sm) {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: left;
+      font-size: 36px;
+      line-height: 42px;
+
+    }
+
+    @media (min-width: @screen-lg) {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: left;
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+
+  &__text p {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    display: inline;
+
+    @media (min-width: @screen-sm) {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: left;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media (min-width: @screen-lg) {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: left;
+      font-size: 18px;
+      line-height: 24px;
+
+    }
+  }
+}
+
+.promo-type {
+  margin: 0 auto;
+  width: 321px;
+  display: flex;
+  justify-content: space-around;
+
+  &__type {
+    padding: 10px 0;
+    text-transform: uppercase;
+    color: #838383;
+
+
+    &--active {
+      color: @orange;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 53px;
+        bottom: 2px;
+        display: inline-block;
+        width: 30px;
+        height: 3px;
+        background-color: @orange;
+        border-radius: 1px;
+      }
+    }
+  }
+}
