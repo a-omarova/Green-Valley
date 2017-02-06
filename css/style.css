@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700&subset=cyrillic,cyrillic-ext');
+body {
+  min-width: 320px;
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+  color: #000;
+  font-weight: 400;
+}
+.page-header {
+  color: #000;
+}
+.page-header__inner {
+  width: 277px;
+  margin: 0 auto;
+  background-color: lightgreen;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.page-header__logo {
+  padding: 10px 0;
+}
+.page-header__contacts {
+  display: none;
+}
+.page-header__btn {
+  display: none;
+}
+.main-nav {
+  position: relative;
+}
+.main-nav__list {
+  display: none;
+  position: absolute;
+  top: 37px;
+  width: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+}
+.main-nav__list--active {
+  display: block;
+}
+.main-nav__item {
+  padding: 10px;
+}
+.main-nav__link {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.main-nav__link--active {
+  color: #ff7435;
+}
+.main-nav__burger {
+  position: absolute;
+  top: 36px;
+  right: 25px;
+}
+.main-nav__burger span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #ff7435;
+  border-radius: 1px;
+}
+.main-nav__burger span:before {
+  position: absolute;
+  left: 0;
+  top: -7px;
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 4px;
+  background-color: #ff7435;
+  border-radius: 1px;
+}
+.main-nav__burger span:after {
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 4px;
+  background-color: #ff7435;
+  border-radius: 1px;
+}
+.btn {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+  text-align: center;
+  color: #FFFFFF;
+  width: 183px;
+  display: block;
+  padding: 10px 0;
+}
+.btn--orange {
+  background-color: #ff7435;
+  border-radius: 50px;
+}
+.promo {
+  background-image: url("../../img/big-banner.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  border-top: 1px solid #ffffff;
+  height: 323px;
+}
+.promo__slider {
+  margin: 0 auto;
+}
+.promo__item {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 20px;
+  text-align: center;
+}
+.promo__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline;
+}
+.promo__text p {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  display: inline;
+}
+.promo-type {
+  margin: 0 auto;
+  width: 321px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.promo-type__type {
+  padding: 10px 0;
+  text-transform: uppercase;
+  color: #838383;
+}
+.promo-type__type--active {
+  color: #ff7435;
+  position: relative;
+}
+.promo-type__type--active:after {
+  content: '';
+  position: absolute;
+  left: 53px;
+  bottom: 2px;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: #ff7435;
+  border-radius: 1px;
+}
+.healthy-holidays__inner {
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0;
+  background-image: url("../../img/background-view.png");
+  border-bottom: 1px solid #ffffff;
+  background-position: center;
+  background-size: cover;
+}
+.healthy-holidays__title {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 30px 0;
+  padding: 0;
+}
+.healthy-holidays__text {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 auto;
+  padding: 0;
+  width: 260px;
+}
+.healthy-holidays__list {
+  display: none;
+}
+.photo__inner {
+  margin: 0 auto;
+}
+.photo__slider {
+  display: none;
+}
+.options {
+  background-color: #0ab89d;
+}
+.options__inner {
+  margin: 0 auto;
+  border-top: 1px solid #0ab89d;
+}
+.options__title {
+  color: #FFFFFF;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+}
+.page-footer__inner {
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 20px;
+}
+.page-footer__address {
+  display: none;
+}
+.page-footer__contacts {
+  display: none;
+}
+.page-footer__social-btn {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.page-footer__btn {
+  width: 30px;
+  height: 30px;
+  background-color: #2e6da4;
+}
+@media (min-width: 768px){
+  .page-header__inner{
+    width: 726px;
+  }
+  .promo__slider{
+    width: 726px;
+  }
+  .promo__item{
+    background-color: rgba(255, 255, 255, 0);
+    text-align: left;
+  }
+  .promo__title{
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .promo__text p{
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .healthy-holidays__inner{
+    width: 726px;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-size: cover;
+  }
+  .healthy-holidays__text{
+    display: block;
+  }
+  .healthy-holidays__list{
+    display: block;
+  }
+  .photo__inner{
+    width: 726px;
+  }
+  .options__inner{
+    width: 726px;
+  }
+  .page-footer__inner{
+    width: 726px;
+  }
+  .page-footer__address{
+    display: block;
+  }
+  .page-footer__contacts{
+    display: block;
+  }
+}
+@media (min-width: 1200px){
+  .page-header__inner{
+    width: 1180px;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .page-header__contacts{
+    display: block;
+  }
+  .page-header__contacts--phone{
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+  }
+  .page-header__btn{
+    display: block;
+  }
+  .main-nav__list{
+    position: static;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .main-nav__burger{
+    display: none;
+  }
+  .promo{
+    height: 433px;
+  }
+  .promo__slider{
+    width: 1180px;
+  }
+  .promo__item{
+    background-color: rgba(255, 255, 255, 0);
+    text-align: left;
+  }
+  .promo__title{
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .promo__text p{
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .healthy-holidays__inner{
+    width: 890px;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-size: cover;
+  }
+  .healthy-holidays__text{
+    max-width: 587px;
+  }
+  .healthy-holidays__list{
+    display: block;
+  }
+  .photo__inner{
+    width: 1180px;
+  }
+  .options__inner{
+    width: 1180px;
+  }
+  .page-footer__inner{
+    width: 1180px;
+  }
+  .page-footer__address{
+    display: block;
+  }
+  .page-footer__contacts{
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
