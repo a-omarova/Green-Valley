@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700&subset=cyrillic,cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif+Caption&subset=cyrillic,cyrillic-ext');
 body {
   min-width: 320px;
   margin: 0;
@@ -12,7 +13,8 @@ body {
 .page-header__inner {
   width: 277px;
   margin: 0 auto;
-  background-color: lightgreen;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -22,6 +24,11 @@ body {
 }
 .page-header__logo {
   padding: 10px 0;
+}
+.page-header__nav {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  text-align: center;
 }
 .page-header__contacts {
   display: none;
@@ -44,6 +51,7 @@ body {
 }
 .main-nav__list--active {
   display: block;
+  position: static;
 }
 .main-nav__item {
   padding: 10px;
@@ -112,6 +120,7 @@ body {
   background-position: bottom left;
   border-top: 1px solid #ffffff;
   height: 323px;
+  background-size: cover;
 }
 .promo__slider {
   margin: 0 auto;
@@ -123,14 +132,18 @@ body {
 }
 .promo__title {
   margin: 0;
+  font-family: 'PT Serif Caption', serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 500;
   display: inline;
+  color: #000;
+}
+.promo__text {
+  margin-top: 15px;
 }
 .promo__text p {
   margin: 0;
-  margin-top: 10px;
   font-size: 16px;
   line-height: 24px;
   display: inline;
@@ -142,6 +155,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  cursor: pointer;
 }
 .promo-type__type {
   padding: 10px 0;
@@ -167,16 +181,20 @@ body {
   margin: 0 auto;
   text-align: center;
   padding: 30px 0;
+  padding-bottom: 40px;
   background-image: url("../../img/background-view.png");
   border-bottom: 1px solid #ffffff;
   background-position: center;
   background-size: cover;
 }
 .healthy-holidays__title {
+  font-family: 'PT Serif Caption', serif;
   font-size: 30px;
   font-weight: 400;
-  margin: 30px 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
   padding: 0;
+  width: 152px;
 }
 .healthy-holidays__text {
   font-size: 16px;
@@ -188,8 +206,14 @@ body {
 .healthy-holidays__list {
   display: none;
 }
+.reviews {
+  background-color: #0ab89d;
+}
 .photo__inner {
-  margin: 0 auto;
+  margin: 40px auto;
+}
+.photo__zoom img {
+  max-width: 100%;
 }
 .photo__slider {
   display: none;
@@ -198,21 +222,62 @@ body {
   background-color: #0ab89d;
 }
 .options__inner {
+  width: 280px;
   margin: 0 auto;
   border-top: 1px solid #0ab89d;
+  border-bottom: 1px solid #0ab89d;
 }
 .options__title {
+  font-family: 'PT Serif Caption', serif;
   color: #FFFFFF;
   font-size: 26px;
   line-height: 32px;
   text-align: center;
+  margin-top: 50px;
+}
+.options__blocks {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.column-block {
+  background-color: #fff;
+  text-align: center;
+}
+.column-block:first-child {
+  margin-bottom: 20px;
+}
+.column-block__img {
+  max-width: 100%;
+}
+.column-block__text {
+  padding: 40px 0;
+}
+.column-block__option {
+  font-family: 'PT Serif Caption', serif;
+  font-size: 26px;
+  line-height: 19px;
+}
+.column-block__cost {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+.column-block__cost--orange {
+  color: #ff7435;
+  font-weight: 700;
 }
 .page-footer__inner {
   margin: 0 auto;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-pack: center;
+      justify-content: center;
   font-size: 14px;
   line-height: 18px;
   padding: 20px;
@@ -275,7 +340,13 @@ body {
   .options__inner{
     width: 726px;
   }
+  .options__blocks{
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
   .page-footer__inner{
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     width: 726px;
   }
   .page-footer__address{
@@ -354,7 +425,13 @@ body {
   .options__inner{
     width: 1180px;
   }
+  .options__blocks{
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
   .page-footer__inner{
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     width: 1180px;
   }
   .page-footer__address{
