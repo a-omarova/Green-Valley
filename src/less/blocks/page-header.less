@@ -5,8 +5,8 @@
   &__inner {
     width: @container-xs;
     margin: 0 auto;
-    background-color: lightgreen;
-
+    //background-color: lightgreen;
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,8 @@
   }
 
   &__nav {
-
+    flex: 0 0 100%;
+    text-align: center;
   }
 
   &__contacts {
@@ -84,6 +85,7 @@
 
     &--active {
       display: block;
+      position: static;
     }
 
 

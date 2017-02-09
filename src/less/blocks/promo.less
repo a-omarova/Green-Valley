@@ -4,6 +4,7 @@
   background-position: bottom left;
   border-top: 1px solid #ffffff;
   height: 323px;
+  background-size: cover;
 
   @media (min-width: @screen-sm) {
 
@@ -51,10 +52,12 @@
 
   &__title {
     margin: 0;
+    font-family: @font-family-title;
     font-size: 18px;
     line-height: 26px;
     font-weight: 500;
     display: inline;
+    color: @t-color;
 
     @media (min-width: @screen-sm) {
       background-color: rgba(255, 255, 255, 0.8);
@@ -72,9 +75,12 @@
     }
   }
 
+  &__text {
+    margin-top: 15px;
+  }
+
   &__text p {
     margin: 0;
-    margin-top: 10px;
     font-size: 16px;
     line-height: 24px;
     display: inline;
@@ -101,6 +107,7 @@
   width: 321px;
   display: flex;
   justify-content: space-around;
+  cursor: pointer;
 
   &__type {
     padding: 10px 0;
