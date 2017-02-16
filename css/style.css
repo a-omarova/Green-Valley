@@ -784,7 +784,7 @@ body {
   .room-category__img{
     position: absolute;
     top: 0;
-    right: 127px;
+    right: 0;
   }
   .room-category__img img{
     height: 316px;
