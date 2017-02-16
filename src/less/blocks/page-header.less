@@ -1,26 +1,27 @@
 .page-header {
   color: @text-color;
-  //position: relative;
 
   &__inner {
-    width: @container-xs;
+    //width: @container-xs;
     margin: 0 auto;
     //background-color: lightgreen;
-    flex-wrap: wrap;
+    flex-wrap: wrap; //1
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media (min-width: @screen-sm) {
-      width: @container-sm;
+      //width: @container-sm;
 
     }
 
     @media (min-width: @screen-lg) {
       width: @container-lg;
       justify-content: space-between;
+      flex-wrap: nowrap;
     }
   }
+
 
   &__logo {
     padding: 10px 0;
@@ -29,6 +30,17 @@
   &__nav {
     flex: 0 0 100%;
     text-align: center;
+
+
+
+    @media (min-width: @screen-sm) {
+
+    }
+
+    @media (min-width: @screen-lg) {
+      flex: 0 1 auto;
+    }
+
   }
 
   &__contacts {
@@ -93,6 +105,11 @@
 
   &__item {
     padding: 10px;
+    border-top: 1px solid #ebebeb;
+
+    @media (min-width: @screen-lg) {
+      border: none;
+    }
 
   }
 
@@ -109,7 +126,7 @@
 
   &__burger {
     position: absolute;
-    //position: relative;
+    cursor: pointer;
     top: 36px;
     right: 25px;
     //padding: 25px 0;

@@ -1,18 +1,23 @@
 .healthy-holidays {
 
+  background-image: url("../../img/background-view.png");
+  border-bottom: 1px solid #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+
   &__inner {
     margin: 0 auto;
     text-align: center;
     padding: 30px 0;
     padding-bottom: 40px;
-    background-image: url("../../img/background-view.png");
-    border-bottom: 1px solid #ffffff;
-    background-position: center;
-    background-size: cover;
+    //background-image: url("../../img/background-view.png");
+    //border-bottom: 1px solid #ffffff;
+    //background-position: center;
+    //background-size: cover;
 
 
     @media (min-width: @screen-sm) {
-      width: @container-sm;
+      width: 570px;
       background-origin: content-box;
       background-clip: content-box;
       background-size: cover;
@@ -31,9 +36,20 @@
     font-size: 30px;
     font-weight: 400;
     margin: 0 auto;
-    margin-bottom: 20px;
     padding: 0;
+    padding-top: 20px;
     width: 152px;
+
+    @media (min-width: @screen-sm) {
+      display: block;
+      min-width: 570px;
+    }
+
+    @media (min-width: @screen-lg) {
+      min-width: 587px;
+    }
+
+
   }
 
   &__text {
@@ -49,7 +65,8 @@
     }
 
     @media (min-width: @screen-lg) {
-      max-width: 587px;
+      min-width: 587px;
+      padding: 30px 0;
     }
 
   }
@@ -58,15 +75,38 @@
     display: none;
 
     @media (min-width: @screen-sm) {
-      display: block;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+
     }
 
     @media (min-width: @screen-lg) {
-      display: block;
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
   }
 
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    & img {
+      align-self: center;
+      width: 80px;
+    }
+    & span {
+      align-self: center;
+      margin-top: 10px;
+    }
+  }
 
 
 

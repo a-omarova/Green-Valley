@@ -1,6 +1,122 @@
 .reviews {
   background-color: @green;
+  border-top: 1px solid @green;
+  border-bottom: 1px solid @green;
+
+  background-image: url("../img/bg-rev.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-size: cover;
+
   &__inner {
-    
+    margin: 50px auto;
+
+
+
+    @media (min-width: @screen-sm) {
+      width: 480px;
+    }
+
+    @media (min-width: @screen-lg) {
+      width: 998px;
+      margin: 50px auto;
+    }
   }
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    color: #FFFFFF;
+    font-family: @font-family-title;
+    font-size: 30px;
+    font-weight: 400;
+  }
+}
+
+.reviews-slider {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @screen-sm) {
+    flex-direction: column;
+  }
+
+  @media (min-width: @screen-lg) {
+    flex-direction: row;
+  }
+
+  &__item {
+    position: relative;
+    background-color: #fff;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    margin: 50px 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    @media (min-width: @screen-sm) {
+      flex-direction: column;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+      &:nth-child(2) {
+        display: block;
+      }
+    }
+
+    @media (min-width: @screen-lg) {
+      margin-left: 10px;
+      margin-right: 10px;
+      &:first-child {
+        margin-bottom: 50px;
+      }
+      &:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+
+  &__avatar {
+    position: absolute;
+    top: -20px;
+    left: 118px;
+
+    @media (min-width: @screen-sm) {
+      top: -20px;
+      left: 196px;
+    }
+
+    @media (min-width: @screen-lg) {
+
+    }
+  }
+
+  &__social {
+    margin: 10px auto;
+    width: 30px;
+    height: 30px;
+    background-color: #2e6da4;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  &__data {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
 }

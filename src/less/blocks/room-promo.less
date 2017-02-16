@@ -1,0 +1,51 @@
+.room-promo {
+  background-image: url('../img/room-head.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+
+  &__inner {
+    width: 263px;
+    margin: 0 auto;
+
+
+    @media (min-width: @screen-sm) {
+      width: 560px;
+    }
+  }
+
+  &__title {
+    margin: 70px 0;
+    font-family: @font-family-title;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+    font-weight: 400;
+
+    @media (min-width: @screen-sm) {
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @media (min-width: @screen-sm) {
+      display: block;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    //@media (min-width: @screen-lg) {
+    //
+    //  width: @container-lg;
+    //}
+  }
+}
