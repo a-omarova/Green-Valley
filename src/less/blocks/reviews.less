@@ -38,6 +38,7 @@
 .reviews-slider {
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   @media (min-width: @screen-sm) {
     flex-direction: column;
@@ -117,6 +118,33 @@
   &__data {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  .slick-arrow {
+    background-color: transparent;
+    color: transparent;
+    width: 25px;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    display: block;
+    cursor: pointer;
+  }
+
+  .slick-prev {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 207px;
+    left: -26px;
+  }
+
+  .slick-next {
+    transform: rotate(135deg);
+    position: absolute;
+    top: 207px;
+    right: -26px;
   }
 
 }
