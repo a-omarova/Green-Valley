@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
     <title>Single Room || Green Valley</title>
 </head>
 <body>
@@ -9,7 +10,7 @@
 <header class="page-header">
   <div class="page-header__inner">
     <div class="page-header__logo">
-      <a href="" class="logo">
+      <a href="index.html" class="logo">
         <img src="img/logo.png" alt="logo">
       </a>
     </div>
@@ -36,7 +37,7 @@
       <div class="page-header__contacts--address">г. Санкт-Петербург, Приморское ш.600</div>
     </div>
     <div class="page-header__btn">
-      <a href="" class="btn btn--orange">забронировать</a>
+      <a href="form.html" class="btn btn--orange">забронировать</a>
     </div>
 
   </div>
@@ -44,63 +45,77 @@
 
 <div class="about-room">
     <div class="about-room__inner">
+        <div class="about-room__title">
+          <h2 class="about-room__name">Эконом</h2>
+          <p class="about-room__price">от <span class="about-room__price--orange">3800</span> руб./сутки</p>
+        </div>
+      <div class="about-room__imgBlock">
+        <img class="about-room__img" src="img/econom-slide.png" alt="">
+        <ul class="about-room__slider">
+          <li><img class="about-room__imgItem" src="img/econom-slide.png" alt=""></li>
+          <li><img class="about-room__imgItem" src="img/econom-room.png" alt=""></li>
+        </ul>
+      </div>
         <div class="about-room__text">
-            <h2 class="about-room__title">Стандарт</h2>
-            <p class="about-room__price">от <span class="orange"></span>4000 руб./сутки</p>
-
-            <h3>О номере</h3>
-            <p>В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны
+            <h3 class="about-room__miniTitle">О номере</h3>
+            <p class="about-room__miniText">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны
                 на проживание 1-2 человек. Часть номеров с видом на Финский залив.</p>
-
-            <h3>Удобства</h3>
-            <ul>
-                <li>wi-fi</li>
+            <h3 class="about-room__miniTitle">Удобства</h3>
+            <ul class="about-room__list">
+                <li>Wi-Fi</li>
                 <li>Двуспальная кровать</li>
                 <li>Кресло</li>
                 <li>Раскладывающийся диван</li>
-                <li>Фен</li>
+              <li>Фен</li>
+            </ul>
+            <ul class="about-room__list">
                 <li>Рабочий стол</li>
                 <li>Шкаф для одежды</li>
                 <li>Багажная тумба</li>
                 <li>Сейф</li>
             </ul>
-
-            <h3>В стоимость входит</h3>
-            <ul>
+            <h3 class="about-room__miniTitle">B стоимость входит</h3>
+            <ul class="about-room__list">
                 <li>Бассейн с 8.30 до 10.00</li>
                 <li>Завтрак и обед "шведский стол"</li>
             </ul>
-
-            <a href="" class="btn btn--orange">забронировать</a>
-            <a href="" class="link"></a>
+        </div>
+        <div class="about-room__btnBlock">
+            <a href="" class="about-room__btn btn btn--orange">забронировать</a>
+            <p class="about-room__price">от <span class="about-room__price--orange">3800</span> руб./сутки</p>
         </div>
     </div>
 </div>
 
-<div class="categories">
-    <div class="categories__inner">
-        <div class="column-block">
-            <div class="column-block__img"></div>
-            <div class="column-block-text">
-                <span class="column-block__option">В отеле</span>
-                <p class="column-block__text">от <span class="orange"></span>4000 руб./сутки</p>
-            </div>
+<div class="options options--grey">
+  <div class="options__inner options__inner--three">
+    <div class="options__blocks">
+      <div class="column-block">
+        <img class="column-block__img" src="img/standart-room.png" alt="room">
+        <div class="column-block__text">
+          
+          <span class="column-block__option">В отеле</span>
+          <p class="column-block__cost">от <span class="column-block__cost--orange">4000</span> руб./сутки</p>
         </div>
-        <div class="column-block">
-            <div class="column-block__img"></div>
-            <div class="column-block-text">
-                <span class="column-block__option">В коттедже</span>
-                <p class="column-block__text">от <span class="orange"></span>6800 руб./сутки</p>
-            </div>
+      </div>
+      <div class="column-block">
+        <img class="column-block__img" src="img/cottage-home.png" alt="cottage">
+        <div class="column-block__text">
+          
+          <span class="column-block__option">В коттедже</span>
+          <p class="column-block__cost">от <span class="column-block__cost--orange">6800</span> руб./сутки</p>
         </div>
-        <div class="column-block">
-            <div class="column-block__img"></div>
-            <div class="column-block-text">
-                <span class="column-block__option">В коттедже</span>
-                <p class="column-block__text">от <span class="orange"></span>6800 руб./сутки</p>
-            </div>
+      </div>
+      <div class="column-block">
+        <img class="column-block__img" src="img/cottage-home.png" alt="cottage">
+        <div class="column-block__text">
+      
+          <span class="column-block__option">В коттедже</span>
+          <p class="column-block__cost">от <span class="column-block__cost--orange">6800</span> руб./сутки</p>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <footer class="page-footer">

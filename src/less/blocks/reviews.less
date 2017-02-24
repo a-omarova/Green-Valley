@@ -61,6 +61,12 @@
     &:nth-child(2) {
       display: none;
     }
+    &:nth-child(3) {
+      display: none;
+    }
+    &:nth-child(4) {
+      display: none;
+    }
 
     @media (min-width: @screen-sm) {
       flex-direction: column;
@@ -73,6 +79,13 @@
       &:nth-child(2) {
         display: block;
       }
+
+      &:nth-child(3) {
+        display: none;
+      }
+      &:nth-child(4) {
+        display: none;
+      }
     }
 
     @media (min-width: @screen-lg) {
@@ -84,13 +97,19 @@
       &:nth-child(2) {
         display: block;
       }
+      &:nth-child(3) {
+        display: block;
+      }
+      &:nth-child(4) {
+        display: block;
+      }
     }
   }
 
   &__avatar {
     position: absolute;
     top: -20px;
-    left: 118px;
+    left: 36.7%;
 
     @media (min-width: @screen-sm) {
       top: -20px;

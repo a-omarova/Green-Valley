@@ -3,11 +3,11 @@ $(document).ready(function(){
       e.preventDefault();
       $('.main-nav__list').toggleClass('main-nav__list--active');
     });
-  
-  
+
+
   var tabs = document.querySelectorAll('.holidays-type__type');
   var content = document.querySelectorAll('.healthy-holidays__inner');
-  
+
   for (var i=0; i<tabs.length; i++) {
     tabs[i].addEventListener('click', function (e) {
       e.preventDefault();
@@ -19,6 +19,7 @@ $(document).ready(function(){
     });
   }
   
+  if ($(window).width() > 1200) {
     $('.photo__main-slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -26,19 +27,60 @@ $(document).ready(function(){
       fade: true,
       asNavFor: '.photo__slider'
     });
-    $('.photo__slider').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      centerPadding: '100px',
-      asNavFor: '.photo__main-slider',
-      // dots: true,
-      centerMode: true,
-      arrows: false,
-      focusOnSelect: true
-    });
+  } else {
+    $('.photo__main-slider')
+      .slick('unslick')
+      .empty();
+  }
+  $('.photo__slider').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    centerPadding: '100px',
+    asNavFor: '.photo__main-slider',
+    // dots: true,
+    centerMode: true,
+    arrows: false,
+    focusOnSelect: true
+  });
   
-    $('.reviews-slider').slick({
-      slidesToShow: 2,
-      slidesToScroll: 2
-    });
+  function reviewsSlider(windowWidth) {
+  
+    console.log(windowWidth);
+  
+    if (windowWidth > 1200 ) {
+      $('.reviews-slider')
+        .slick({
+          slidesToShow: 2,
+          slidesToScroll: 2
+        });
+    } else {
+      $('.reviews-slider')
+        .slick('unslick')
+        .empty();
+    }
+  }
+  
+  reviewsSlider($(window).width());
+  
+  $('.about-room__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+  
+  // var windowWidth = $(window).width();
+  //
+  // console.log(windowWidth);
+  //
+  // if (windowWidth > 768 ) {
+  //   $('.reviews-slider').slick({
+  //     slidesToShow: 2,
+  //     slidesToScroll: 2
+  //   });
+  // } else {
+  //   $('.reviews-slider').unslick();
+  // }
+
+    
+
+
 });

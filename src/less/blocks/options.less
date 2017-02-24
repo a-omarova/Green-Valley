@@ -1,19 +1,30 @@
 .options {
   background-color: @green;
+  border-top: 1px solid @green;
+  border-bottom: 1px solid @green;
+
+  &--grey {
+    background-color: #f6f6f6;
+    border-top: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+  }
    &__inner {
 
      width: 280px;
 
      margin: 0 auto;
-     border-top: 1px solid @green;
-     border-bottom: 1px solid @green;
+
 
      @media (min-width: @screen-sm) {
        width: @container-sm;
      }
 
      @media (min-width: @screen-lg) {
-       width: @container-lg;
+       width: 780px;
+
+       &--three {
+         width: @container-lg;
+       }
      }
    }
 
@@ -52,9 +63,33 @@
   background-color: #fff;
   text-align: center;
 
+  @media (min-width: @screen-sm) {
+    width: 352px;
+  }
+
+  @media (min-width: @screen-lg) {
+    width: 375px;
+  }
+
 
   &:first-child {
     margin-bottom: 20px;
+
+    @media (min-width: @screen-sm) {
+      margin-bottom: 0;
+    }
+
+    //@media (min-width: @screen-lg) {
+    //  flex-direction: row;
+    //}
+  }
+
+  &:last-child {
+    display: none;
+
+    @media (min-width: @screen-lg) {
+      display: block;
+    }
   }
 
   &__img {
@@ -76,11 +111,14 @@
   &__cost {
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    padding-top: 10px;
+    font-size: 14px;
+    text-transform:  uppercase;
 
     &--orange {
       color: @orange;
       font-weight: 700;
+      font-size: 18px;
     }
   }
   // object-fit: cover;
