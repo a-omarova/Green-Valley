@@ -88,6 +88,9 @@
 
 <div class="photo">
     <div class="photo__inner">
+        <div class="photo__img">
+          <img src="img/1.jpg" alt="">
+        </div>
         <ul class="photo__main-slider">
             <li class="photo__main-item"><img src="img/1.jpg" alt=""></li>
             <li class="photo__main-item"><img src="img/2.jpg" alt=""></li>
@@ -166,32 +169,28 @@
     <div class="discount__inner">
         <h2 class="discount__title">Акции и предложения</h2>
         <div class="discount-slider">
-            <div class="discount-slider__slide">
-                <div class="discount-slider__bigPhoto"></div>
-                <div class="discount-text">
-                    <span class="discount-text__title">скидки в мае</span>
-                    <p class="discount-text__text">Забронируй котедж или номер любой категории до 31 июнь и получите скидку 10%</p>
+            <div data-number="1" class="discount-slider__slide discount-slider__slide--active">
+                <div class="discount-slider__img">
+                  <img src="img/happy-fam.png" alt="">
+                </div>
+                <div class="discount-slider__block">
+                    <span class="discount-slider__title">скидки в мае</span>
+                    <p class="discount-slider__text">Забронируй котедж или номер любой категории до 31 июнь и получите скидку 10%</p>
                 </div>
             </div>
-            <!--<div class="discount-slider__slide">-->
-                <!--<div class="column-block">-->
-                    <!--&lt;!&ndash;??????????&ndash;&gt;-->
-                <!--</div>-->
-                <!--<div class="column-block">-->
-                    <!--<div class="column-block__img"></div>-->
-                    <!--<div class="column-block-text">-->
-                        <!--<span class="column-block__title">скидка владельцам карт втб24</span>-->
-                        <!--<p class="column-block__text">При оплате картами банка ВТБ24 вы получаете дополнительные бонусы и скидки</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="column-block">-->
-                    <!--<div class="column-block__img"></div>-->
-                    <!--<div class="column-block-text">-->
-                        <!--<span class="column-block__title">все включено</span>-->
-                        <!--<p class="column-block__text">Отдых на берегу финского залива всей семьёй с трёхразовым питанием и бассейном</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
+            <div data-number="2" class="discount-slider__slide">
+                <div class="discount-slider__img">
+                    <img src="img/happy-fam.png" alt="">
+                </div>
+                <div class="discount-slider__block">
+                    <span class="discount-slider__title">скидки в августе</span>
+                    <p class="discount-slider__text">Забронируй котедж или номер любой категории до 31 июнь и получите скидку 10%</p>
+                </div>
+            </div>
+        </div>
+        <div class="discount-slider__circles">
+           <div data-number="1" class="discount-slider__circle discount-slider__circle--active"></div>
+           <div data-number="2" class="discount-slider__circle"></div>
         </div>
     </div>
 </div>
