@@ -1,0 +1,40 @@
+.booking {
+  &__inner {
+
+    margin: 20px auto;
+
+    @media (min-width: @screen-sm) {
+      width: @container-sm;
+    }
+
+    @media (min-width: @screen-lg) {
+      width: @container-lg;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    padding: 30px 0;
+    font-family: @font-family-title;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 240px;
+    font-size: 16px;
+    line-height: 20px;
+
+    &--orange {
+      color: @orange;
+    }
+
+    @media (min-width: @screen-sm) {
+      width: 392px;
+    }
+  }
+}
