@@ -891,6 +891,87 @@ body {
   top: 255px;
   right: 30px;
 }
+.booking__inner {
+  margin: 20px auto;
+}
+.booking__title {
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+  font-family: 'PT Serif Caption', serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+.booking__text {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 240px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.booking__text--orange {
+  color: #ff7435;
+}
+.step {
+  text-transform: uppercase;
+  color: #929292;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.booking-date {
+  background-color: #f1f1f1;
+}
+.booking-date__inner {
+  margin: 40px auto;
+  padding: 40px 0;
+}
+.booking-date__title {
+  font-family: 'PT Serif Caption', serif;
+  font-size: 26px;
+  line-height: 19px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+}
+.booking-date__blocks {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 auto;
+}
+.booking-date__item {
+  margin: 0 auto;
+  text-align: center;
+}
+.booking-date__item input {
+  text-align: center;
+  width: 56px;
+  height: 50px;
+  border: 1px solid #ebebeb;
+  margin-left: -6px;
+  color: #979696;
+}
+.booking-date__item input:invalid {
+  color: red;
+}
+.booking-date__item #inYear,
+.booking-date__item #outYear {
+  width: 70px;
+}
+.booking-date__itemTitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #4c4c4c;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
 @media (min-width: 768px){
   .promo__slider{
     width: 726px;
@@ -1074,6 +1155,20 @@ body {
   }
   .about-room__text{
     width: 726px;
+  }
+  .booking__inner{
+    width: 726px;
+  }
+  .booking__text{
+    width: 392px;
+  }
+  .booking-date__inner{
+    width: 726px;
+  }
+  .booking-date__blocks{
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 400px;
   }
 }
 @media (min-width: 1200px){
@@ -1310,6 +1405,28 @@ body {
   .about-room .slick-next{
     top: 200px;
     right: 30px;
+  }
+  .booking__inner{
+    width: 1180px;
+  }
+  .booking-date__inner{
+    width: 1180px;
+  }
+  .booking-date__title{
+    padding-bottom: 20px;
+  }
+  .booking-date__blocks{
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    padding-bottom: 40px;
+  }
+  .booking-date__item input{
+    width: 44px;
+    height: 27px;
+  }
+  .booking-date__item #inYear,
+  .booking-date__item #outYear{
+    width: 52px;
   }
 }
 

@@ -44,29 +44,31 @@
 </header>
 
 <div class="booking">
-    <div class="booking__title">Бронирование</div>
+  <div class="booking__inner">
+    <h2 class="booking__title">Бронирование</h2>
     <p class="booking__text">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните
-        по телефону: <span class="booking__text--orange">+7 812 777-55-88</span></p>
+      по телефону: <span class="booking__text--orange">+7 812 777-55-88</span></p>
+  </div>
 </div>
 
 <form method="post" action="">
   
   <div class="booking-date">
     <div class="booking-date__inner">
-      <div class="step"></div>
-      <div class="booking-date__title">Дата отдыха</div>
+      <div class="step">шаг 1</div>
+      <h3 class="booking-date__title">Дата отдыха</h3>
       <div class="booking-date__blocks">
         <div class="booking-date__item">
-          <div class="booking-date__title">дата въезда</div>
-          <input type="number" name="in-date" id="inDay" min="1" max="31" placeholder="ДД">
-          <input type="number" name="in-month" id="inMonth" min="1" max="12" placeholder="ДД">
-          <input type="number" name="in-year" id="inYear" min="2017" max="2020" placeholder="ДД">
+          <div class="booking-date__itemTitle">дата въезда</div>
+          <label><input type="number" name="in-date" id="inDay" min="1" max="31" placeholder="ДД"></label>
+          <label><input type="number" name="in-month" id="inMonth" min="1" max="12" placeholder="ММ"></label>
+          <label><input type="number" name="in-year" id="inYear" min="2017" max="2020" placeholder="ГГГГ"></label>
         </div>
         <div class="booking-date__item">
-          <div class="booking-date__title">дата выезда</div>
-          <input type="number" name="out-data" id="outDay" min="1" max="31" placeholder="ДД">
-          <input type="number" name="out-month" id="outMonth" min="1" max="12" placeholder="ДД">
-          <input type="number" name="out-year" id="outYear" min="2017" max="2020" placeholder="ДД">
+          <div class="booking-date__itemTitle">дата выезда</div>
+          <label><input type="number" name="out-date" id="outDay" min="1" max="31" placeholder="ДД"></label>
+          <label><input type="number" name="out-month" id="outMonth" min="1" max="12" placeholder="ММ"></label>
+          <label><input type="number" name="out-year" id="outYear" min="2017" max="2020" placeholder="ГГГГ"></label>
         </div>
       </div>
     </div>
