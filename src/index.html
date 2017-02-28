@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Home || Green Valley</title>
+  <meta charset="UTF-8">
+  <title>Home || Green Valley</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -89,7 +89,7 @@
 <div class="photo">
     <div class="photo__inner">
         <div class="photo__img">
-          <img src="img/1.jpg" alt="">
+          <!--<img src="img/1.jpg" alt="">-->
         </div>
         <ul class="photo__main-slider">
             <li class="photo__main-item"><img src="img/1.jpg" alt=""></li>
@@ -170,18 +170,18 @@
         <h2 class="discount__title">Акции и предложения</h2>
         <div class="discount-slider">
             <div data-number="1" class="discount-slider__slide discount-slider__slide--active">
-                <div class="discount-slider__img">
-                  <img src="img/happy-fam.png" alt="">
-                </div>
+                <!--<div class="discount-slider__img">-->
+                  <!--<img src="img/happy-fam.png" alt="">-->
+                <!--</div>-->
                 <div class="discount-slider__block">
                     <span class="discount-slider__title">скидки в мае</span>
                     <p class="discount-slider__text">Забронируй котедж или номер любой категории до 31 июнь и получите скидку 10%</p>
                 </div>
             </div>
             <div data-number="2" class="discount-slider__slide">
-                <div class="discount-slider__img">
-                    <img src="img/happy-fam.png" alt="">
-                </div>
+                <!--<div class="discount-slider__img">-->
+                    <!--<img src="img/happy-fam.png" alt="">-->
+                <!--</div>-->
                 <div class="discount-slider__block">
                     <span class="discount-slider__title">скидки в августе</span>
                     <p class="discount-slider__text">Забронируй котедж или номер любой категории до 31 июнь и получите скидку 10%</p>
@@ -197,30 +197,35 @@
 
 <div class="routes">
     <div class="routes__inner">
+        <h2 class="routes__title">Как до нас добраться</h2>
+        <div class="routes__mapImg">
+          <img src="img/map.png" alt="Карта">
+        </div>
         <div class="routes__map">
-
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.4992816154154!2d30.30298231603646!3d59.97362898188886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963156bc896593%3A0x5d00b08284c74c5b!2z0JfQtdC70LXQvdCw0Y8g0LTQvtC70LjQvdCw!5e0!3m2!1sru!2sru!4v1488275094135" width="1180" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-        <div class="routes__transport">
-            <div class="routes__icon routes__icon--bus">
-
-            </div>
-            <span class="routes__title">автобусы</span>
-            <p class="routes__text">
-                <span class="bold">№ 211</span> от станции метро «Черная речка» до остановки «Санаторий Репино»
-                <span class="bold">№ 305К</span> от станции метро «Старая деревня»
-                <span class="bold">№ 680К</span> от станции метро «Проспект Просвещения»
-                <span class="bold">№ 400К</span> от станции метро «Площадь Ленина»</p>
-        </div>
-        <div class="routes__transport">
-            <div class="routes__icon routes__icon--train">
-
-            </div>
-            <span class="routes__title">электропоезд</span>
-            <p class="routes__text">
-                Электропоезд Выборгского направления
+        <div class="routes__columns">
+          <div class="routes__block">
+            <div class="routes__icon routes__icon--bus"></div>
+            <div class="routes__transport">автобусы</div>
+            <ul class="routes__text">
+              <li><span class="routes__text--bold">№ 211</span> от станции метро «Черная речка» до остановки «Санаторий Репино»</li>
+              <li><span class="routes__text--bold">№ 305К</span> от станции метро «Старая деревня»</li>
+              <li><span class="routes__text--bold">№ 680К</span> от станции метро «Проспект Просвещения»</li>
+              <li><span class="routes__text--bold">№ 400К</span> от станции метро «Площадь Ленина»</li>
+            </ul>
+          </div>
+          <div class="routes__block">
+            <div class="routes__icon routes__icon--train"></div>
+            <div class="routes__transport">электропоезд</div>
+            <ul class="routes__text">
+              <li>Электропоезд Выборгского направления
                 от Финляндского вокзала Санкт-Петербурга
-                до платформы «Репино»</p>
+                до платформы «Репино»</li>
+            </ul>
+          </div>
         </div>
+        
     </div>
 </div>
 

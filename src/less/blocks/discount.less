@@ -28,6 +28,16 @@
  .discount-slider{
    position: relative;
 
+   background-image: url("../img/happy-fam.png");
+   height: 300px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+   @media (min-width: @screen-lg) {
+     height: 350px;
+   }
+
    &__slide {
      display: none;
      &--active {
@@ -35,18 +45,18 @@
      }
    }
 
-   &__img {
-
-     img {
-       min-width: 100%;
-       height: 300px;
-       object-fit: cover;
-
-       @media (min-width: @screen-lg) {
-         height: 350px;
-       }
-     }
-   }
+   //&__img {
+   //
+   //  img {
+   //    max-width: 100%;
+   //    height: 300px;
+   //    object-fit: cover;
+   //
+   //    @media (min-width: @screen-lg) {
+   //      height: 350px;
+   //    }
+   //  }
+   //}
 
    &__block {
      position: absolute;
@@ -76,7 +86,7 @@
    }
 
    &__circles {
-     padding: 10px 0;
+     padding: 20px 0;
      margin: 0 auto;
      //width: 100px;
      text-align: center;
