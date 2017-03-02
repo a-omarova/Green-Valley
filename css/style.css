@@ -90,6 +90,7 @@ body {
 }
 .page-header {
   color: #000;
+  border-bottom: 2px solid #ebebeb;
 }
 .page-header__inner {
   margin: 0 auto;
@@ -109,6 +110,9 @@ body {
   -ms-flex: 0 0 100%;
       flex: 0 0 100%;
   text-align: center;
+}
+.page-header__nav :hover {
+  color: #ff7435;
 }
 .page-header__contacts {
   display: none;
@@ -143,14 +147,39 @@ body {
   font-size: 14px;
   text-transform: uppercase;
 }
-.main-nav__link--active {
-  color: #ff7435;
+.main-nav__link--active-LV1 {
+  position: relative;
+}
+.main-nav__link--active-LV1:after {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 11px;
+  background-color: #ff7435;
+  width: 30px;
+  height: 1px;
+}
+.main-nav__link--active-LV1:hover:after {
+  display: none;
+}
+.main-nav__link--active-LV2 {
+  position: relative;
+}
+.main-nav__link--active-LV2:before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 11px;
+  background-color: #ff7435;
+  width: 30px;
+  height: 2px;
 }
 .main-nav__burger {
   position: absolute;
   cursor: pointer;
-  top: 36px;
+  top: 13px;
   right: 25px;
+  padding: 25px 0;
 }
 .main-nav__burger span {
   display: block;
@@ -162,7 +191,7 @@ body {
 .main-nav__burger span:before {
   position: absolute;
   left: 0;
-  top: -7px;
+  top: 17px;
   content: '';
   display: inline-block;
   width: 25px;
@@ -173,7 +202,7 @@ body {
 .main-nav__burger span:after {
   position: absolute;
   left: 0;
-  bottom: -7px;
+  bottom: 17px;
   content: '';
   display: inline-block;
   width: 25px;
@@ -196,11 +225,32 @@ body {
   background-color: #ff7435;
   width: 183px;
 }
+.btn--orange:hover {
+  background-color: #e85715;
+}
 .btn--green {
   border: 2px solid #ffffff;
   width: 145px;
   padding: 8px 0;
   margin: 0 auto;
+}
+.btn--green:hover {
+  background-color: #fff;
+  color: #15b698;
+}
+.btn--icon {
+  padding-left: 25px;
+  width: 143px;
+  position: relative;
+}
+.btn--icon:before {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/calendar.png");
 }
 .promo {
   background-image: url("../img/big-banner.png");
@@ -212,6 +262,7 @@ body {
 }
 .promo__slider {
   margin: 0 auto;
+  margin-top: -1px;
 }
 .promo__item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -267,7 +318,7 @@ body {
   border-radius: 1px;
 }
 .healthy-holidays {
-  background-image: url("../../img/background-view.png");
+  background-image: url("../img/background-view.png");
   border-bottom: 1px solid #ffffff;
   background-position: center;
   background-repeat: no-repeat;
@@ -553,10 +604,10 @@ body {
   background-position: center;
 }
 .routes__icon--bus {
-  background-image: url("../img/bus-icon.png");
+  background-image: url("../img/bus.png");
 }
 .routes__icon--train {
-  background-image: url("../img/train-icon.png");
+  background-image: url("../img/train.png");
 }
 .routes__text {
   margin: 0;
@@ -665,7 +716,17 @@ body {
 .page-footer__btn {
   width: 30px;
   height: 30px;
-  background-color: #2e6da4;
+  background-image: url("../img/social-sprite.png");
+  background-repeat: no-repeat;
+}
+.page-footer__btn--vk {
+  background-position: 2px 3px;
+}
+.page-footer__btn--i {
+  background-position: -56px 5px;
+}
+.page-footer__btn--f {
+  background-position: -118px 5px;
 }
 .rooms__inner {
   margin: 0 auto;
@@ -684,6 +745,7 @@ body {
   background-size: cover;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
+  margin-top: -1px;
 }
 .room-promo__inner {
   width: 263px;
@@ -772,6 +834,10 @@ body {
   text-decoration: none;
   color: #000000;
   border-bottom: 2px dashed #000000;
+}
+.room-category__link:hover {
+  color: #ff7435;
+  border-bottom: 2px dashed #ff7435;
 }
 .about-room__inner {
   margin: 0 auto;
@@ -925,7 +991,8 @@ body {
 }
 .booking-date__inner {
   margin: 40px auto;
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 100px;
 }
 .booking-date__title {
   font-family: 'PT Serif Caption', serif;
@@ -945,10 +1012,12 @@ body {
   -ms-flex-pack: center;
       justify-content: center;
   margin: 0 auto;
+  padding-top: 20px;
 }
 .booking-date__item {
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 10px;
 }
 .booking-date__item input {
   text-align: center;
@@ -969,8 +1038,60 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   color: #4c4c4c;
-  padding-top: 20px;
   padding-bottom: 10px;
+}
+.residence__inner {
+  margin: 20px auto;
+}
+.residence__title {
+  font-family: 'PT Serif Caption', serif;
+  font-size: 26px;
+  line-height: 19px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.residence__block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  position: relative;
+  border: 1px solid #ebebeb;
+  background-color: #fff;
+  padding-bottom: 40px;
+}
+.residence__block:before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  width: 1px;
+  height: 85px;
+  background-color: #ebebeb;
+}
+.residence__item {
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.residence__item label {
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #4c4c4c;
+  width: 50px;
+  height: 50px;
+}
+.residence__item--hotel {
+  background-image: url("../img/hotel.png");
 }
 @media (min-width: 768px){
   .promo__slider{
@@ -1169,6 +1290,9 @@ body {
     -ms-flex-direction: row;
     flex-direction: row;
     width: 400px;
+  }
+  .residence__inner{
+    width: 726px;
   }
 }
 @media (min-width: 1200px){
@@ -1413,12 +1537,22 @@ body {
     width: 1180px;
   }
   .booking-date__title{
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
   .booking-date__blocks{
     border: 1px solid #ebebeb;
     background-color: #fff;
     padding-bottom: 40px;
+    position: relative;
+  }
+  .booking-date__blocks:before{
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 1px;
+    height: 85px;
+    background-color: #ebebeb;
   }
   .booking-date__item input{
     width: 44px;
@@ -1427,6 +1561,9 @@ body {
   .booking-date__item #inYear,
   .booking-date__item #outYear{
     width: 52px;
+  }
+  .residence__inner{
+    width: 1180px;
   }
 }
 
