@@ -1,0 +1,74 @@
+.residence {
+
+  &__inner {
+
+    margin: 20px auto;
+
+    @media (min-width: @screen-sm) {
+      width: @container-sm;
+    }
+
+    @media (min-width: @screen-lg) {
+      width: @container-lg;
+    }
+  }
+
+
+
+  &__title {
+    font-family: @font-family-title;
+    font-size: 26px;
+    line-height: 19px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    padding-bottom: 40px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      width: 1px;
+      height: 85px;
+      background-color: #ebebeb;
+    }
+
+  }
+
+  &__item {
+    margin: 0 auto;
+    padding-bottom: 10px;
+
+    label {
+      cursor: pointer;
+      position: relative;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #4c4c4c;
+      width: 50px;
+      height: 50px;
+
+    }
+
+    &--hotel{
+      background-image: url("../img/hotel.png");
+    }
+
+
+  }
+}

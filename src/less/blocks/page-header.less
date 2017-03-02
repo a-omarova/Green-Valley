@@ -1,19 +1,13 @@
 .page-header {
   color: @text-color;
+  border-bottom: 2px solid #ebebeb;
 
   &__inner {
-    //width: @container-xs;
     margin: 0 auto;
-    //background-color: lightgreen;
     flex-wrap: wrap; //1
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media (min-width: @screen-sm) {
-      //width: @container-sm;
-
-    }
 
     @media (min-width: @screen-lg) {
       width: @container-lg;
@@ -31,14 +25,12 @@
     flex: 0 0 100%;
     text-align: center;
 
-
-
-    @media (min-width: @screen-sm) {
-
-    }
-
     @media (min-width: @screen-lg) {
       flex: 0 1 auto;
+    }
+
+    :hover {
+      color: @orange;
     }
 
   }
@@ -119,17 +111,49 @@
     font-size: @font-size;
     text-transform: uppercase;
 
-    &--active {
-      color: @orange;
+    &--active-LV1 {
+
+       position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 19px;
+        left: 11px;
+        background-color: @orange;
+        width: 30px;
+        height: 1px;
+      }
+
+      &:hover {
+        &:after {
+          display: none;
+        }
+      }
+     }
+    &--active-LV2 {
+
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 22px;
+        left: 11px;
+        background-color: @orange;
+        width: 30px;
+        height: 2px;
+      }
+
     }
   }
 
   &__burger {
     position: absolute;
     cursor: pointer;
-    top: 36px;
+    top: 13px;
     right: 25px;
-    //padding: 25px 0;
+    padding: 25px 0;
 
     @media (min-width: @screen-lg) {
       display: none;
@@ -148,7 +172,7 @@
       &:before {
         position: absolute;
         left: 0;
-        top: -7px;
+        top: 17px;
         content: '';
         display: inline-block;
         width: 25px;
@@ -160,7 +184,7 @@
       &:after {
         position: absolute;
         left: 0;
-        bottom: -7px;
+        bottom: 17px;
         content: '';
         display: inline-block;
         width: 25px;

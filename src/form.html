@@ -18,7 +18,7 @@
     <div class="page-header__nav">
       <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="roomlist.html" class="main-nav__link main-nav__link--active">номера</a></li>
+          <li class="main-nav__item"><a href="roomlist.html" class="main-nav__link">номера</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">коттедж</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">ресторан</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">отдых</a></li>
@@ -37,7 +37,7 @@
       <div class="page-header__contacts--address">г. Санкт-Петербург, Приморское ш.600</div>
     </div>
     <div class="page-header__btn">
-      <a href="form.html" class="btn btn--orange">забронировать</a>
+      <a href="form.html" class="btn btn--orange btn--icon">забронировать</a>
     </div>
   
   </div>
@@ -76,16 +76,21 @@
   
   <div class="residence">
     <div class="residence__inner">
-      <div class="step"></div>
+      <div class="step">шаг 2</div>
       <div class="residence__title">Место проживания</div>
       <div class="residence__block">
         <div class="residence__item">
-          <div class="residence__item-title"></div>
-          <div class="residence__img residence__img--hotel"></div>
+          <input id="residence__item--hotel" type="radio" name="residence" value="hotel" checked>
+          <label for="residence__item--hotel">отель</label>
+          
+          <!--<div class="residence__item-title"></div>-->
+          <!--<div class="residence__img residence__img&#45;&#45;hotel"></div>-->
         </div>
         <div class="residence__item">
-          <div class="residence__item-title"></div>
-          <div class="residence__img residence__img--cottage"></div>
+          <input id="residence__item--cottage" type="radio" name="residence" value="cottage">
+          <label for="residence__item--cottage">коттедж</label>
+          <!--<div class="residence__item-title"></div>-->
+          <!--<div class="residence__img residence__img&#45;&#45;cottage"></div>-->
         </div>
       </div>
     </div>
@@ -121,6 +126,6 @@
   </div>
 </footer>
 
-
+<script src="js/script.min.js"></script>
 </body>
 </html>
