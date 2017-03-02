@@ -1042,6 +1042,7 @@ body {
 }
 .residence__inner {
   margin: 20px auto;
+  width: 277px;
 }
 .residence__title {
   font-family: 'PT Serif Caption', serif;
@@ -1074,24 +1075,57 @@ body {
   top: 15%;
   left: 50%;
   width: 1px;
-  height: 85px;
+  height: 120px;
   background-color: #ebebeb;
 }
 .residence__item {
   margin: 0 auto;
-  padding-bottom: 10px;
-}
-.residence__item label {
-  cursor: pointer;
+  padding-bottom: 90px;
   position: relative;
+  text-align: center;
+}
+.residence__itemTitle {
   font-size: 14px;
   text-transform: uppercase;
   color: #4c4c4c;
-  width: 50px;
-  height: 50px;
 }
-.residence__item--hotel {
-  background-image: url("../img/hotel.png");
+.residence__itemTitle:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 40px;
+  opacity: 0.4;
+}
+.residence__itemTitle--hotel:before {
+  left: -20px;
+  width: 82px;
+  height: 64px;
+  background: url("../img/hotel-check.png") no-repeat;
+}
+.residence__itemTitle--cottage:before {
+  left: -10px;
+  width: 81px;
+  height: 62px;
+  background: url("../img/cottage-check.png") no-repeat;
+}
+.residence__house {
+  cursor: pointer;
+}
+.residence__house input[type="radio"] {
+  display: none;
+}
+.residence__house input[type="radio"]:checked + .residence__itemTitle:before {
+  opacity: 1.0;
+}
+.residence__house input[type="radio"]:checked + .residence__itemTitle:after {
+  content: '';
+  width: 17px;
+  height: 12px;
+  border-right: 4px solid #4bcbb7;
+  border-bottom: 4px solid #4bcbb7;
+  position: absolute;
+  left: 50%;
+  top: 130px;
 }
 @media (min-width: 768px){
   .promo__slider{
