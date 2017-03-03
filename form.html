@@ -34,7 +34,7 @@
     
     
     <div class="page-header__contacts">
-      <a href="" class="page-header__contacts--phone">+7 812 777-55-88</a>
+      <a href="tel:+7(000)000000" class="page-header__contacts--phone">+7 812 777-55-88</a>
       <div class="page-header__contacts--address">г. Санкт-Петербург, Приморское ш.600</div>
     </div>
     <div class="page-header__btn">
@@ -82,17 +82,136 @@
       <div class="residence__block">
         <div class="residence__item">
           <label class="residence__house">
+            <input type="radio" name="residence" value="hotel">
             <span class="residence__itemTitle residence__itemTitle--hotel">отель</span>
-            <input type="radio" name="residence" value="hotel" checked>
           </label>
         </div>
         <div class="residence__item">
           <label class="residence__house">
+            <input type="radio" name="residence" value="cottage" checked>
             <span class="residence__itemTitle residence__itemTitle--cottage">коттедж</span>
-            <input type="radio" name="residence" value="cottage">
           </label>
         </div>
       </div>
+    </div>
+  </div>
+  
+  
+  <div class="cottage-types">
+    <div class="cottage-types__inner">
+      <div class="step">шаг 3</div>
+      <h2 class="cottage-types__title">Тип коттеджа</h2>
+      <ul class="cottage-types__list">
+        <li class="cottage-types__item">
+          <label class="cottage-types__label">
+            <input type="radio" name="type"  class="cottage-types__input" id="flagman">
+            <span class="cottage-types__labelTitle">флагман</span>
+          </label>
+        </li>
+        <li class="cottage-types__item">
+          <label class="cottage-types__label">
+            <input type="radio" name="type"  class="cottage-types__input" id="ozerny">
+            <span class="cottage-types__labelTitle">озёрный</span>
+          </label>
+        </li>
+        <li class="cottage-types__item">
+          <label class="cottage-types__label">
+            <input type="radio" name="type"  class="cottage-types__input" id="olhovka">
+            <span class="cottage-types__labelTitle">ольховка</span>
+          </label>
+        </li>
+        <li class="cottage-types__item">
+          <label class="cottage-types__label">
+            <input type="radio" name="type"  class="cottage-types__input" id="portovy">
+            <span class="cottage-types__labelTitle">портовый</span>
+          </label>
+        </li>
+      </ul>
+      <div class="cottage-types__options" id="types--flagman">
+        <ul class="cottage-types__options-list">
+          <li class="cottage-types__options-item">Площадь 100м<sup>2</sup></li>
+          <li class="cottage-types__options-item">2 комнаты</li>
+          <li class="cottage-types__options-item">3 спальных мест</li>
+          <li class="cottage-types__options-item">Раздельный санузел</li>
+          <li class="cottage-types__options-item">Wi-fi</li>
+        </ul>
+      </div>
+      <div class="cottage-types__options" id="types--ozerny">
+        <ul class="cottage-types__options-list">
+          <li class="cottage-types__options-item">Площадь 250м<sup>2</sup></li>
+          <li class="cottage-types__options-item">3 комнаты</li>
+          <li class="cottage-types__options-item">6 спальных мест</li>
+          <li class="cottage-types__options-item">Раздельный санузел</li>
+          <li class="cottage-types__options-item">Wi-fi</li>
+        </ul>
+      </div>
+      <div class="cottage-types__options" id="types--olhovka">
+        <ul class="cottage-types__options-list">
+          <li class="cottage-types__options-item">Площадь 340м<sup>2</sup></li>
+          <li class="cottage-types__options-item">4 комнаты</li>
+          <li class="cottage-types__options-item">10 спальных мест</li>
+          <li class="cottage-types__options-item">Раздельный санузел</li>
+          <li class="cottage-types__options-item">Wi-fi</li>
+        </ul>
+      </div>
+      <div class="cottage-types__options" id="types--portovy">
+        <ul class="cottage-types__options-list" >
+          <li class="cottage-types__options-item">Площадь 500м<sup>2</sup></li>
+          <li class="cottage-types__options-item">5 комнаты</li>
+          <li class="cottage-types__options-item">15 спальных мест</li>
+          <li class="cottage-types__options-item">Раздельный санузел</li>
+          <li class="cottage-types__options-item">Wi-fi</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="information">
+    <div class="information__inner">
+      <div class="step">Шаг 4</div>
+      <h2 class="information__title">Персональная информация</h2>
+      <div class="information__form">
+        <label class="information__label">
+          <input type="text" name="name" placeholder="Имя" required>
+        </label>
+        <label class="information__label">
+          <input type="text" name="surname" placeholder="Фамилия" required>
+        </label>
+      </div>
+      <div class="information__form">
+        <label class="information__label">
+          <input type="tel" name="telephone" placeholder="Номер телефона" required>
+          <div class="information__info">Мы свяжемся с вами в случае необходимости.</div>
+        </label>
+        <label class="information__label">
+          <input type="email" name="email" placeholder="e-mail" required>
+          <div class="information__info">На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
+        </label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="payment">
+    <div class="payment__inner">
+      <div class="step">Шаг 5</div>
+      <h2 class="payment__title">Способ оплаты</h2>
+      <div class="payment__total">
+        <span class="payment__totalTitle">к оплате</span>
+        <div class="payment__totalPrice"> - </div>
+        <p class="payment__totalText"> <span class="payment__totalIcon"></span>Пожалуйста, <span class="payment__totalDashed">выберите дату</span> въезда и выезда, чтобы увидеть сумму к оплате. </p>
+      </div>
+      <div class="payment__method">
+        <div class="payment__cash">
+          <div class="payment__cashTitle">По приезду</div>
+          <p class="payment__cashText">Вы можете произвести оплату по факту заселения</p>
+        </div>
+        <div class="payment__cart">
+          <div class="payment__cashTitle">Сейчас</div>
+          <p class="payment__cashText">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
+        </div>
+      </div>
+      
     </div>
   </div>
   
@@ -107,13 +226,13 @@
         Приморское ш.600</p>
     </div>
     <div class="page-footer__social">
-      <div class="page-footer__logo">
+      <a href="index.html" class="page-footer__logo">
         <img src="img/logo.png" alt="logo">
-      </div>
+      </a>
       <div class="page-footer__social-btn">
-        <div class="page-footer__btn page-footer__btn--vk"></div>
-        <div class="page-footer__btn page-footer__btn--i"></div>
-        <div class="page-footer__btn page-footer__btn--f"></div>
+        <a href="http://vk.com" class="page-footer__btn page-footer__btn--vk"></a>
+        <a href="http://instagram.com" class="page-footer__btn page-footer__btn--i"></a>
+        <a href="http://facebook.com" class="page-footer__btn page-footer__btn--f"></a>
       
       </div>
     </div>

@@ -1042,6 +1042,7 @@ body {
 }
 .residence__inner {
   margin: 20px auto;
+  margin-bottom: 50px;
   width: 277px;
 }
 .residence__title {
@@ -1119,13 +1120,228 @@ body {
 }
 .residence__house input[type="radio"]:checked + .residence__itemTitle:after {
   content: '';
-  width: 17px;
+  width: 7px;
   height: 12px;
-  border-right: 4px solid #4bcbb7;
-  border-bottom: 4px solid #4bcbb7;
+  border-right: 4px solid #0AB89D;
+  border-bottom: 4px solid #0AB89D;
+  transform: rotate(45deg);
   position: absolute;
-  left: 50%;
-  top: 130px;
+  top: 120px;
+  left: 14px;
+}
+.residence__house input[type="radio"]:checked + .residence__itemTitle--cottage:after {
+  left: 23px;
+}
+.cottage-types {
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+}
+.cottage-types__inner {
+  padding-top: 20px;
+  margin: 20px auto;
+  margin-bottom: 50px;
+}
+.cottage-types__title {
+  font-family: 'PT Serif Caption', serif;
+  font-size: 26px;
+  line-height: 19px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.cottage-types__list {
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 15px 0;
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  text-align: center;
+}
+.cottage-types__item {
+  padding: 15px 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #969696;
+  text-transform: uppercase;
+}
+.cottage-types__label {
+  cursor: pointer;
+  position: relative;
+}
+.cottage-types__label input[type="radio"] {
+  display: none;
+}
+.cottage-types__label input[type="radio"]:checked + .cottage-types__labelTitle {
+  color: #000;
+}
+.cottage-types__label input[type="radio"]:checked + .cottage-types__labelTitle:before {
+  content: '';
+  width: 5px;
+  height: 9px;
+  border-right: 4px solid #0AB89D;
+  border-bottom: 4px solid #0AB89D;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: -53px;
+}
+.cottage-types__options {
+  display: none;
+  position: relative;
+}
+.cottage-types__options-list {
+  display: none;
+}
+.cottage-types__options-item {
+  width: 100px;
+  padding: 0 20px;
+  padding-top: 60px;
+  text-align: center;
+}
+.cottage-types__options-item:nth-child(1) {
+  background: url("../../img/triangle.png") no-repeat;
+  background-position: center 0;
+}
+.cottage-types__options-item:nth-child(2) {
+  background: url("../../img/door.png") no-repeat;
+  background-position: center 0;
+}
+.cottage-types__options-item:nth-child(3) {
+  background: url("../../img/bed.png") no-repeat;
+  background-position: center 0;
+}
+.cottage-types__options-item:nth-child(4) {
+  background: url("../../img/bath.png") no-repeat;
+  background-position: center 0;
+}
+.cottage-types__options-item:nth-child(5) {
+  background: url("../../img/wifi.png") no-repeat;
+  background-position: center 0;
+}
+.information__inner {
+  padding-top: 20px;
+  margin: 20px auto;
+  margin-bottom: 50px;
+  width: 277px;
+}
+.information__title {
+  font-family: 'PT Serif Caption', serif;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.information__form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.information__label input {
+  border: 1px solid #ebebeb;
+  width: 280px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: #969696;
+}
+.information__label input:valid {
+  color: #000000;
+}
+.information__info {
+  text-align: left;
+  font-size: 14px;
+  line-height: 18px;
+}
+.payment {
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+}
+.payment__inner {
+  padding-top: 20px;
+  margin: 20px auto;
+  margin-bottom: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.payment__title {
+  font-family: 'PT Serif Caption', serif;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.payment__total {
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 15px 0;
+  -ms-flex-order: 1;
+      order: 1;
+}
+.payment__cash {
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  color: #ebebeb;
+  position: relative;
+}
+.payment__cash :before {
+  content: '';
+  width: 5px;
+  height: 9px;
+  border-right: 4px solid #ebebeb;
+  border-bottom: 4px solid #ebebeb;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: -53px;
+}
+.payment__cashTitle {
+  text-transform: uppercase;
+  padding-left: 60px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.payment__cashText {
+  display: none;
+}
+.payment__cart {
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 15px 0;
 }
 @media (min-width: 768px){
   .promo__slider{
@@ -1326,6 +1542,59 @@ body {
     width: 400px;
   }
   .residence__inner{
+    width: 380px;
+  }
+  .cottage-types__list{
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 25px;
+  }
+  .cottage-types__item{
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 40px 50px;
+    border-right: 1px solid #ebebeb;
+  }
+  .cottage-types__item:last-child{
+    border-right: none;
+  }
+  .cottage-types__label input[type="radio"]:checked + .cottage-types__labelTitle:before{
+    top: 30px;
+    left: 25px;
+  }
+  .cottage-types__options-list{
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+  }
+  .information__inner{
+    width: 726px;
+  }
+  .information__form{
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .information__label input{
+    margin: 10px;
+    width: 355px;
+  }
+  .information__info{
+    margin: 0 10px;
+    width: 355px;
+  }
+  .payment__inner{
     width: 726px;
   }
 }
@@ -1596,8 +1865,17 @@ body {
   .booking-date__item #outYear{
     width: 52px;
   }
-  .residence__inner{
-    width: 1180px;
+  .cottage-types__inner{
+    width: 780px;
+  }
+  .information__inner{
+    width: 780px;
+  }
+  .information__form{
+    width: 780px;
+  }
+  .payment__inner{
+    width: 780px;
   }
 }
 
