@@ -4,17 +4,27 @@
   &__inner {
     padding-top: 20px;
     margin: 20px auto;
-    margin-bottom: 50px;
+    margin-top: 0;
+    //margin-bottom: 50px;
+
+
+    @media (min-width: @screen-sm) {
+      width: @screen-sm;
+    }
+
+    @media (min-width: @screen-lg) {
+      width: 780px;
+    }
+  }
+
+  &__bigBlock {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     @media (min-width: @screen-sm) {
-      width: @container-sm;
-    }
-
-    @media (min-width: @screen-lg) {
-      width: 780px;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 
@@ -34,14 +44,20 @@
     background-color: #fff;
     border: 1px solid #ebebeb;
     margin: 0;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
     padding: 15px 0;
-    //text-align: center;
     order: 1;
+
+    @media (min-width: @screen-sm) {
+      order: 0;
+      flex: 30% 0 0;
+    }
   }
 
   &__method {
-
+    @media (min-width: @screen-sm) {
+      flex: 58% 0 0;
+    }
   }
 
   &__cash {
@@ -50,10 +66,38 @@
     margin: 0;
     margin-bottom: 30px;
     padding: 20px 0;
-    color: #ebebeb;
-    position: relative;
+  }
 
-    :before {
+  &__label {
+
+
+    input[type="radio"] {
+      display: none;
+
+      &:checked + .payment__labelTitle{
+        color: #000;
+      }
+
+      &:checked + .payment__labelTitle:before {
+        border-right: 4px solid #0AB89D;
+        border-bottom: 4px solid #0AB89D;
+
+        @media (min-width: @screen-sm) {
+
+        }
+      }
+    }
+  }
+
+  &__labelTitle {
+    text-transform: uppercase;
+    padding-left: 60px;
+    font-size: 14px;
+    line-height: 16px;
+    position: relative;
+    color: #ebebeb;
+
+    &:before {
       content: '';
       width: 5px;
       height: 9px;
@@ -61,20 +105,12 @@
       border-bottom: 4px solid #ebebeb;
       transform: rotate(45deg);
       position: absolute;
-      top: 0;
-      left: -53px;
-
+      top: 2px;
+      left: 28px;
     }
   }
 
-  &__cashTitle {
-    text-transform: uppercase;
-    padding-left: 60px;
-    font-size: 14px;
-    line-height: 16px;
-  }
-
-  &__cashText {
+  &__labelText {
     display: none;
   }
 
@@ -82,9 +118,125 @@
     background-color: #fff;
     border: 1px solid #ebebeb;
     margin: 0;
-    margin-bottom: 30px;
-    padding: 15px 0;
-    //text-align: center;
+    //margin-bottom: 30px;
+    padding: 20px 0;
+  }
+
+  &__cartBlock {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: @screen-sm) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 240px;
+    margin: 0 auto;
+
+    @media (min-width: @screen-sm) {
+      width:  194px;
+    }
+
+    input {
+      width: 240px;
+      border: 1px solid #ebebeb;
+      text-transform: uppercase;
+      text-align: center;
+      //margin-top: 10px;
+      //margin-bottom: 15px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      color: #969696;
+
+      @media (min-width: @screen-sm) {
+        width: 200px;
+      }
+    }
+
+    &--minWidth {
+      @media (min-width: @screen-sm) {
+        width: 150px;
+        input {
+          width: 150px;
+        }
+      }
+    }
+  }
+
+  &__formTitle {
+    display: block;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__totalTitle {
+    display: block;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  &__totalPrice {
+    text-align: center;
+    font-size: 24px;
+    line-height: 18px;
+    font-weight: 700;
+    padding: 20px 0;
+  }
+
+  &__totalText {
+    width: 260px;
+    margin: 0 auto;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 12px;
+      background: url(../img/warn.png) no-repeat;
+    }
+
+    @media (min-width: @screen-sm) {
+      padding-left: 30px;
+      padding-right: 10px;
+    }
+  }
+
+  &__totalDashed{
+    color: #000000;
+    border-bottom: 1px dashed #000000;
+    text-decoration: none;
+  }
+
+  &__btnBlock {
+    margin: 0 auto;
+    width: 280px;
+    display: flex;
+    @media (min-width: @screen-sm) {
+      width: 780px;
+    }
+  }
+
+  &__btn {
+    width: 280px;
+    margin: 20px auto;
+    text-align: center;
+    @media (min-width: @screen-sm) {
+      width: 100%;
+    }
   }
 
 }
