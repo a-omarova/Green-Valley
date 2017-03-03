@@ -238,6 +238,16 @@ body {
   background-color: #fff;
   color: #15b698;
 }
+.btn--greenBig {
+  display: inline-block;
+  border-radius: 0;
+  padding: 18px 0;
+  margin: 0 auto;
+  background-color: #0ab89d;
+}
+.btn--greenBig:hover {
+  background-color: #0da48d;
+}
 .btn--icon {
   padding-left: 25px;
   width: 143px;
@@ -1279,7 +1289,9 @@ body {
 .payment__inner {
   padding-top: 20px;
   margin: 20px auto;
-  margin-bottom: 50px;
+  margin-top: 0;
+}
+.payment__bigBlock {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -1302,7 +1314,6 @@ body {
   background-color: #fff;
   border: 1px solid #ebebeb;
   margin: 0;
-  margin-bottom: 30px;
   padding: 15px 0;
   -ms-flex-order: 1;
       order: 1;
@@ -1313,10 +1324,26 @@ body {
   margin: 0;
   margin-bottom: 30px;
   padding: 20px 0;
-  color: #ebebeb;
-  position: relative;
 }
-.payment__cash :before {
+.payment__label input[type="radio"] {
+  display: none;
+}
+.payment__label input[type="radio"]:checked + .payment__labelTitle {
+  color: #000;
+}
+.payment__label input[type="radio"]:checked + .payment__labelTitle:before {
+  border-right: 4px solid #0AB89D;
+  border-bottom: 4px solid #0AB89D;
+}
+.payment__labelTitle {
+  text-transform: uppercase;
+  padding-left: 60px;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+  color: #ebebeb;
+}
+.payment__labelTitle:before {
   content: '';
   width: 5px;
   height: 9px;
@@ -1324,24 +1351,95 @@ body {
   border-bottom: 4px solid #ebebeb;
   transform: rotate(45deg);
   position: absolute;
-  top: 0;
-  left: -53px;
+  top: 2px;
+  left: 28px;
 }
-.payment__cashTitle {
-  text-transform: uppercase;
-  padding-left: 60px;
-  font-size: 14px;
-  line-height: 16px;
-}
-.payment__cashText {
+.payment__labelText {
   display: none;
 }
 .payment__cart {
   background-color: #fff;
   border: 1px solid #ebebeb;
   margin: 0;
-  margin-bottom: 30px;
-  padding: 15px 0;
+  padding: 20px 0;
+}
+.payment__cartBlock {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.payment__form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 240px;
+  margin: 0 auto;
+}
+.payment__form input {
+  width: 240px;
+  border: 1px solid #ebebeb;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: #969696;
+}
+.payment__formTitle {
+  display: block;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.payment__totalTitle {
+  display: block;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+.payment__totalPrice {
+  text-align: center;
+  font-size: 24px;
+  line-height: 18px;
+  font-weight: 700;
+  padding: 20px 0;
+}
+.payment__totalText {
+  width: 260px;
+  margin: 0 auto;
+}
+.payment__totalText:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  background: url(../img/warn.png) no-repeat;
+}
+.payment__totalDashed {
+  color: #000000;
+  border-bottom: 1px dashed #000000;
+  text-decoration: none;
+}
+.payment__btnBlock {
+  margin: 0 auto;
+  width: 280px;
+  display: -ms-flexbox;
+  display: flex;
+}
+.payment__btn {
+  width: 280px;
+  margin: 20px auto;
+  text-align: center;
 }
 @media (min-width: 768px){
   .promo__slider{
@@ -1595,7 +1693,51 @@ body {
     width: 355px;
   }
   .payment__inner{
-    width: 726px;
+    width: 768px;
+  }
+  .payment__bigBlock{
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .payment__total{
+    -ms-flex-order: 0;
+    order: 0;
+    -ms-flex: 30% 0 0px;
+    flex: 30% 0 0;
+  }
+  .payment__method{
+    -ms-flex: 58% 0 0px;
+    flex: 58% 0 0;
+  }
+  .payment__cartBlock{
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  .payment__form{
+    width: 194px;
+  }
+  .payment__form input{
+    width: 200px;
+  }
+  .payment__form--minWidth{
+    width: 150px;
+  }
+  .payment__form--minWidth input{
+    width: 150px;
+  }
+  .payment__totalText{
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+  .payment__btnBlock{
+    width: 768px;
+  }
+  .payment__btn{
+    width: 100%;
   }
 }
 @media (min-width: 1200px){

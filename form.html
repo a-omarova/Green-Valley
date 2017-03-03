@@ -196,24 +196,63 @@
     <div class="payment__inner">
       <div class="step">Шаг 5</div>
       <h2 class="payment__title">Способ оплаты</h2>
-      <div class="payment__total">
-        <span class="payment__totalTitle">к оплате</span>
-        <div class="payment__totalPrice"> - </div>
-        <p class="payment__totalText"> <span class="payment__totalIcon"></span>Пожалуйста, <span class="payment__totalDashed">выберите дату</span> въезда и выезда, чтобы увидеть сумму к оплате. </p>
-      </div>
-      <div class="payment__method">
-        <div class="payment__cash">
-          <div class="payment__cashTitle">По приезду</div>
-          <p class="payment__cashText">Вы можете произвести оплату по факту заселения</p>
+      
+      <div class="payment__bigBlock">
+        <div class="payment__total">
+          <span class="payment__totalTitle">к оплате</span>
+          <div class="payment__totalPrice"> - </div>
+          <p class="payment__totalText">Пожалуйста, <a href="#" class="payment__totalDashed">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате. </p>
         </div>
-        <div class="payment__cart">
-          <div class="payment__cashTitle">Сейчас</div>
-          <p class="payment__cashText">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
+        <div class="payment__method">
+          <div class="payment__cash">
+            <label class="payment__label">
+              <input type="radio" name="payment">
+              <span class="payment__labelTitle">по приезду</span>
+              <p class="payment__labelText">Вы можете произвести оплату по факту заселения</p>
+            </label>
+          </div>
+          <div class="payment__cart">
+            <label class="payment__label">
+              <input type="radio" name="payment" checked>
+              <span class="payment__labelTitle">сейчас</span>
+              <p class="payment__labelText">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
+              <div class="payment__cartBlock">
+                <div class="payment__form">
+                  <label class="payment__formLabel">
+                    <span class="payment__formTitle">номер карты</span>
+                    <input type="text" name="cart-number" placeholder="0000-0000-0000-0000" required>
+                  </label>
+                  <label class="payment__formLabel">
+                    <span class="payment__formTitle">фамилия владельца карты</span>
+                    <input type="text" name="cart-name" placeholder="VLADIMIR VLADIMIROV" required>
+                  </label>
+                </div>
+                <div class="payment__form  payment__form--minWidth">
+                  <label class="payment__formLabel">
+                    <span class="payment__formTitle">код cvv</span>
+                    <input type="password" name="cart-cvv" placeholder="123" required>
+                  </label>
+                  <label class="payment__formLabel">
+                    <span class="payment__formTitle">действует до</span>
+                    <input type="text" name="cart-date" placeholder="ММ / ГГГГ" required>
+                  </label>
+                </div>
+              </div>
+            </label>
+          </div>
         </div>
       </div>
       
+      
+      
     </div>
+    <div class="payment__btnBlock">
+      <a href="" class="btn btn--greenBig payment__btn">Забронировать</a>
+    </div>
+    
   </div>
+  
+  
   
   
 </form>
