@@ -81,20 +81,14 @@ $(document).ready(function(){
     });
   }
   
-  // var windowWidth = $(window).width();
-  //
-  // console.log(windowWidth);
-  //
-  // if (windowWidth > 768 ) {
-  //   $('.reviews-slider').slick({
-  //     slidesToShow: 2,
-  //     slidesToScroll: 2
-  //   });
-  // } else {
-  //   $('.reviews-slider').unslick();
-  // }
-
-    
-
-
+  $('.cottage-types__input').on('click', function() {
+    var idInput = $(this).attr('id');
+    var idBlock = '#types--'+idInput;
+    $('.cottage-types__options').hide();
+    $(idBlock).show();
+  });
+  
+  
+  
+  
 });

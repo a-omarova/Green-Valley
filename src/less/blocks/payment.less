@@ -1,0 +1,90 @@
+.payment {
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  &__inner {
+    padding-top: 20px;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: @screen-sm) {
+      width: @container-sm;
+    }
+
+    @media (min-width: @screen-lg) {
+      width: 780px;
+    }
+  }
+
+  &__title {
+    font-family: @font-family-title;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  &__total {
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 15px 0;
+    //text-align: center;
+    order: 1;
+  }
+
+  &__method {
+
+  }
+
+  &__cash {
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    color: #ebebeb;
+    position: relative;
+
+    :before {
+      content: '';
+      width: 5px;
+      height: 9px;
+      border-right: 4px solid #ebebeb;
+      border-bottom: 4px solid #ebebeb;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 0;
+      left: -53px;
+
+    }
+  }
+
+  &__cashTitle {
+    text-transform: uppercase;
+    padding-left: 60px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__cashText {
+    display: none;
+  }
+
+  &__cart {
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 15px 0;
+    //text-align: center;
+  }
+
+}
