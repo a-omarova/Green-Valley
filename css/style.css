@@ -875,6 +875,9 @@ body {
   font-weight: 700;
   font-size: 18px;
 }
+.about-room__imgBlock {
+  text-align: center;
+}
 .about-room__img {
   max-width: 100%;
   height: 260px;
