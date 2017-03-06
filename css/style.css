@@ -266,7 +266,7 @@ body {
   background-image: url("../img/big-banner.png");
   background-repeat: no-repeat;
   background-position: bottom left;
-  border-top: 1px solid #ffffff;
+  border-top: -1px solid #ffffff;
   height: 323px;
   background-size: cover;
 }
@@ -276,7 +276,7 @@ body {
 }
 .promo__item {
   background-color: rgba(255, 255, 255, 0.8);
-  margin-top: 20px;
+  padding-top: 20px;
   text-align: center;
 }
 .promo__title {
@@ -285,7 +285,6 @@ body {
   font-size: 18px;
   line-height: 26px;
   font-weight: 500;
-  display: inline;
   color: #000;
 }
 .promo__text {
@@ -877,7 +876,7 @@ body {
   font-size: 18px;
 }
 .about-room__img {
-  min-width: 100%;
+  max-width: 100%;
   height: 260px;
   object-fit: cover;
 }
@@ -1450,10 +1449,14 @@ body {
     text-align: left;
   }
   .promo__title{
-    background-color: rgba(255, 255, 255, 0.8);
+    background: none;
     text-align: left;
     font-size: 36px;
     line-height: 49px;
+    width: 80%;
+  }
+  .promo__title span{
+    background-color: rgba(255, 255, 255, 0.8);
   }
   .promo__text p{
     background-color: rgba(255, 255, 255, 0.8);
@@ -1789,10 +1792,11 @@ body {
     text-align: left;
   }
   .promo__title{
-    background-color: rgba(255, 255, 255, 0.8);
+    background: none;
     text-align: left;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 47px;
+    width: 45%;
   }
   .promo__text p{
     background-color: rgba(255, 255, 255, 0.8);
